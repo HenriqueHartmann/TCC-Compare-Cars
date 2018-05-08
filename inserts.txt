@@ -1,0 +1,13 @@
+insert into montadora(idmontadora, nome_montadora) VALUES (1, 'Chevrolet');
+
+insert into modelo(idmodelo, nomemodelo, idmontadora) VALUES (1, 'Camaro', 1), (2, 'Captiva', 1);
+
+insert into ano(id_ano, ano) VALUES (1, 2017), (2, 2017), (3, 2016);
+
+insert into versao(id_versao, versao) VALUES (1, 'Fifty 6.2 V8'), (2, 'SS 6.2 V8'), (3, 'SS 6.2 V8 Conversivel'), (4, 'Sport 2.4'), (5, 'Sport 2.4');
+
+insert into usuario(id_user, senha, email, nome, tip_user) VALUES (1, 12345, 'admin@gmail.com', 'admin', 'admin');
+
+INSERT INTO `bd_auto1`.`triade` (`id_versao`, `id_ano`, `idmodelo`, `idcarro`) VALUES ('1', '1', '1', '1');
+
+insert into veiculo(idcarro, potencia, portas, preco, altura, comprimento, cambio, velocidade, tanque_combustivel, tip_combustivel, porta_malas, tip_direcao, consumo_urb, consumo_rod, marcha, tip_tracao, porte, ocupantes, tip_freio, tip_veiculo, id_user, largura) VALUES 		(1, '461 cv a 6000 rpm', 2, 'R$259.295', '1340 mm', '4784 mm', 'Automático', '290 km/h', '72 litros', 'Gasolina', '208 litros', 'Elétrica', '5,6 km/l', '8 km/l', 8, 'Traseira', 'Grande', 4, 'Disco ventilado', 'Cupê', 1, '1894 mm'),		(2, '461 cv a 6000 rpm', 2, 'R$261.218', '1340 mm', '4784 mm', 'Automático', '290 km/h', '72 litros', 'Gasolina', '208 litros', 'Elétrica', '5,6 km/l', '8 km/l', 8, 'Traseira', 'Grande', 4, 'Disco ventilado', 'Cupê', 1, '1894 mm'),		(3, '461 cv a 6000 rpm', 2, 'R$291.029', '1340 mm', '4784 mm', 'Automático', '290 km/h', '72 litros', 'Gasolina', '208 litros', 'Elétrica', '5,6 km/l', '8 km/l', 8, 'Traseira', 'Grande', 4, 'Disco ventilado', 'Conversível', 1, '1894 mm'),		(4, '184 cv a 6700 rpm', 4, 'R$91.102', '1704 mm', '4576 mm', 'Automático', '210 km/h', '73 litros', 'Gasolina', '383 litros', 'Hidráulica', '7,2 km/l', '9,7 km/l', 6, 'Dianteira', 'Médio', 5, 'Disco ventilado', 'SUV', 1, '1850 mm'),		(5, '184 cv a 6700 rpm', 4, 'R$94.383', '1704 mm', '4576 mm', 'Automático', '210 km/h', '73 litros', 'Gasolina', '383 litros', 'Hidráulica', '7,2 km/l', '9,7 km/l', 6, 'Dianteira', 'Médio', 5, 'Disco ventilado', 'SUV', 1, '1850 mm');
