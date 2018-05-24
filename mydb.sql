@@ -24,7 +24,7 @@ USE `mydb` ;
 -- Table `mydb`.`usuario`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`usuario` (
-  `idusuario` INT NOT NULL,
+  `idusuario` INT NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(45) NULL,
   `senha` VARCHAR(45) NULL,
   `tip_usuario` VARCHAR(45) NULL,
@@ -47,7 +47,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`modelo`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`modelo` (
-  `idmodelo` INT NOT NULL,
+  `idmodelo` INT NOT NULL AUTO_INCREMENT,
   `nome_modelo` VARCHAR(45) NULL,
   `montadora_idmontadora` INT NOT NULL,
   PRIMARY KEY (`idmodelo`),
