@@ -46,4 +46,36 @@ class CrudModelo
         $modelos = $resultado->fetchAll(PDO::FETCH_ASSOC);
         return $modelos;
     }
+
+    public function insertModelo(Modelo $modelo){
+
+        $this->conexao = DBConexao::getConexao();
+
+        $sql = "INSERT INTO modelo (idmodelo, nome_modelo, montadora_idmontadora) VALUES ('{$modelo->getIdmodelo()}', '{$modelo->getNomemodelo()}', '{$modelo->getMontadoraIdmontadora()}',)";
+        try{
+            $this->conexao->exec($sql);
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
+    }
+
+    public function updateModelo(Modelo $modelo){
+
+        $sql = "UPDATE modelo SET idmodelo ='{$modelo->getIdmodelo()}', nome_modelo ='{$modelo->getNomemodelo()}', montadora_idmontadora ='{$modelo->getMontadoraIdmontadora()}' WHERE idmodelo=".$modelo->getIdmodelo();
+        try{
+            $this->conexao->exec($sql);
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
+    }
+
+    public function  deleteModelo($id){
+        $sql = "DELETE FROM modelo WHERE idmodelo =".$id;
+        try{
+            $this->conexao->exec($sql);
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
+
+    }
 };

@@ -39,4 +39,31 @@ class CrudMontadora
         $montadoras = $resultado->fetchAll(PDO::FETCH_ASSOC);
         return $montadoras;
     }
+
+    public function insertMontadora(Montadora $montadora){
+        $sql = "INSERT INTO montadora(idmontadora, montadora) VALUES ('{$montadora->getIdMontadora()}', '{$montadora->getNomeMontadora()}')";
+        try{
+            $this->conexao->exec($sql);
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
+    }
+
+    public function deleteMontadora($id){
+        $sql = "DELETE FROM montadora WHERE idmontadora =".$id;
+        try{
+            $this->conexao->exec($sql);
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
+    }
+
+    public function updateMontadora(Montadora $montadora){
+        $sql = "UPDATE montadora SET idmontadora = '{$montadora->getIdMontadora()}', '{$montadora->getNomeMontadora()}'";
+        try{
+            $this->conexao->exec($sql);
+        }catch (PDOException $e){
+            return $e->getMessage();
+        }
+    }
 }
