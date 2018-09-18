@@ -4,5 +4,12 @@ require_once "../../models/DBConexao.php";
 
 $crud = new CrudModelo();
 $models = $crud->getModelName();
-$modelos = json_encode($models);
-file_put_contents('modelos.json', "$modelos");
+for ($i = 1; $i <= 208; $i++) {
+    foreach ($models as $model) {
+        if($model['montadora_idmontadora'] == $i) {
+            $modelmarca = json_encode($model);
+            print_r($modelmarca);
+            file_put_contents('modelo'.$i.'.json', $modelmarca);
+        }
+  }
+}
